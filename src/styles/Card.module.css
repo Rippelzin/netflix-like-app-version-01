@@ -1,0 +1,65 @@
+.card{
+    width: 30vh;
+    height: fit-content;
+    padding: 10px;
+    background-color: red;
+    transition: transform 1s ease-in-out;
+    
+}
+.cardHovered {
+    width: 40vh;
+    height: fit-content;
+    padding: 10px;
+    background-color: blue;
+    
+    transition: transform 1s ease-in-out;
+    margin: 1vh;
+    
+}
+
+.cardHovered:hover {
+   
+    width: 50vh;
+    height: fit-content;
+    transform: scale(1.1); /* Aumenta o tamanho para o dobro, mantendo o centro */
+    
+}
+
+.img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 8px;
+    
+}
+.carddisplay{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 3vh ;
+}
+
+.arrowbutton {
+    background-color: #333; /* Cor do fundo do botão */
+    border: 2px solid white; /* Borda branca */
+    border-radius: 50%; /* Torna o botão circular */
+    width: 4vh; /* Largura do botão */
+    height: 4vh; /* Altura do botão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none; /* Remove a borda de foco do botão */
+    transition: background-color 0.3s, transform 0.2s; /* Transições para efeito hover */
+  }
+  
+  .arrow-button:hover {
+    background-color: #555; /* Cor do fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumenta um pouco ao passar o mouse */
+  }
+  
+  .arrow {
+    color: white; /* Cor da seta */
+    font-size: 2vh; /* Tamanho da seta */
+  }
+  
