@@ -1,0 +1,12 @@
+.card {
+        left: 50%;
+        transform: translate(-50%, -50%);  /* Centraliza exatamente no meio */
+        width: 30vh;            /* Largura do card */
+        height: 150vh;           /* Espaçamento interno */
+        background-color: purple; /* Cor de fundo do card */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+        border-radius: 8px;      /* Bordas arredondadas */
+        z-index: 1000000;           /* Garantia de que o card ficará acima de outros elementos */
+      
+      
+}

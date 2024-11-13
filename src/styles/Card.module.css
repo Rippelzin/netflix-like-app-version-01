@@ -6,24 +6,7 @@
     transition: transform 1s ease-in-out;
     
 }
-.cardHovered {
-    width: 40vh;
-    height: fit-content;
-    padding: 10px;
-    background-color: blue;
-    
-    transition: transform 1s ease-in-out;
-    margin: 1vh;
-    
-}
 
-.cardHovered:hover {
-   
-    width: 50vh;
-    height: fit-content;
-    transform: scale(1.1); /* Aumenta o tamanho para o dobro, mantendo o centro */
-    
-}
 
 .img{
     width: 100%;
@@ -61,5 +44,14 @@
   .arrow {
     color: white; /* Cor da seta */
     font-size: 2vh; /* Tamanho da seta */
+  }
+
+
+  .banner_container{
+    z-index: 2;
+    margin-top: 2vh;
+    height: 40vh;
+    width: 100vh;
+    position: absolute;
   }
   

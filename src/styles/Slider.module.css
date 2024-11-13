@@ -1,109 +1,41 @@
-.container {
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden; /* Impede o transbordamento horizontal */
-  position: relative;
+.slider_container {
   display: flex;
   align-items: center;
-  margin-top: 2vh;
-  padding: 0 5%;
-  box-sizing: border-box;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden; /* Para ocultar itens fora da área visível */
+  position: relative;
+  width: 100%;
 }
-  
-  .slider {
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-  
-  .slider-item {
-    flex: 0 0 16.66%;
-    margin: 0 5px;
-    box-sizing: border-box;
-    position: relative;
-    
-    transition: transform 0.3s ease, z-index 0.3s ease;
-  }
-  
-  .slider-item.expanded {
-    
-    z-index: 5;
-  }
-  
-  .img {
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-  }
-  
-  .arrow {
-    background-color: rgba(0, 0, 0, 0.6); /* Um pouco mais transparente */
-    color: white;
-    cursor: pointer;
-    font-size: 2.5rem; /* Ajuste de tamanho */
-    height: 50px; /* Tamanho fixo para altura */
-    width: 50px; /* Tamanho fixo para largura */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    border: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 3;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .arrow:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: black;
-    border: 2px solid rgb(46, 46, 46);
-    transform: translateY(-50%) scale(1.1); /* Aumenta um pouco ao passar o mouse */
-  }
-  
-  .arrow:first-of-type {
-    left: 10px; /* Posiciona a seta da esquerda */
-  }
-  
-  .arrow:last-of-type {
-    right: 10px; /* Posiciona a seta da direita */
-  }
-  
-  
-  .card {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: white;
-    display: grid;
-    align-items: flex-start;
-    padding: 10px;
-    border-radius: 0 0 8px 8px;
-    box-sizing: border-box;
-  }
-  
-  .cardImage {
-    width: 50%;
-    border-radius: 8px;
-    margin-right: 10px;
-    object-fit: cover;
-  }
-  
-  .cardDetails {
-    flex: 1;
-  }
-  
-  .cardDetails h3 {
-    margin: 0;
-    font-size: 1.2em;
-  }
-  
-  .cardDetails p {
-    margin: 5px 0;
-  }
-  
+
+.slider_arrow {
+  width: 10vh;
+  height: 5vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider_arrow:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Efeito ao passar o mouse */
+}
+
+.slider_content {
+  display: flex;
+  gap: 10px;
+  transition: transform 0.3s ease; /* Transição suave ao mudar de slide */
+  overflow: hidden;
+  width: 80%; /* Ajuste conforme o espaço disponível */
+}
+
+.slider_card {
+  flex: 0 0 auto;
+  min-width: calc(100% / 4 - 10px); /* Divide a largura pela quantidade de itens visíveis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}

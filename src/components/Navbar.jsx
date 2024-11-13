@@ -23,7 +23,7 @@ const Navbar = () => {
             <Link to="/" onClick={handleMenuToggle}>Home</Link>
           </li>
           <li>
-            <Link to="/about" onClick={handleMenuToggle}>About</Link>
+            <Link to="/my-list" onClick={handleMenuToggle}>My List</Link>
           </li>
           <li>
             <Link to="/login" onClick={handleMenuToggle}>Login</Link>

@@ -1,0 +1,101 @@
+/* Banner.module.css */
+
+.banner_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.banner_content {
+  background-color: rgba(255, 255, 255, 0.373);
+  display: grid;
+  width: 70vh;
+  height: 40vh;
+  text-align: left;
+  padding: 2vh;
+}
+
+.banner_image {
+  position: absolute;
+  
+  width: 80vh;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.banner_title {
+  font-size: 6vh;
+  font-weight: bold;
+  margin-bottom: 1vh;
+}
+
+.banner_info {
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+  font-size: 3vh;
+  margin-bottom: 1vh;
+}
+
+.banner_info .ageRating {
+  padding: 1vh 1vh;
+  border-radius: 1vh;
+  background-color: rgba(200, 11, 11, 0.9);
+  font-weight: bold;
+}
+
+.banner_description {
+  font-size: 3vh;
+  line-height: 1.5;
+  max-width: 50vh;
+  background-color: rgb(241, 6, 6);
+  border-radius: 2vh;
+  padding: 2vh;
+}
+
+.banner_buttons {
+  display: flex;
+  gap: 1vh;
+  margin-top: 2vh;
+}
+
+.banner_button {
+  padding: 1vh 2vh;
+  font-size: 2.5vh;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.banner_button.play {
+  background-color: #e50914;
+  color: white;
+}
+
+.banner_button.moreInfo {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+.close_button{
+  background-color: rgb(255, 0, 0);
+  width: 5vh;
+  height: 5vh;
+  border-radius: 10vh;
+  color: white;
+  font-size: 2vh;
+  padding: 1vh;
+  border: solid transparent;
+}
