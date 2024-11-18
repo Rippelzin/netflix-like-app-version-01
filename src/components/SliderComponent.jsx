@@ -7,12 +7,12 @@ import Card from './Card';
 
 const SliderComponent = ({ filmesSeries, onCardClick }) => {
     const settings = {
-        dots: true,
         arrows: true,
         infinite: true,
         speed: 500,
         slidesToShow: 6,
-        rows: 1
+        
+        
     };
 
     return (

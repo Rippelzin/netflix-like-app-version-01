@@ -10,7 +10,7 @@ const Card = ({ info, onCardClick  }) => {
       
         <div className={styles.card} >
           <img
-            src={info.image}
+            src={info.cover_image_url}
             className={styles.img}
             alt=""
             

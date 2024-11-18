@@ -1,5 +1,6 @@
 /* Banner.module.css */
 
+
 .banner_container {
   position: fixed;
   top: 0;
@@ -98,4 +99,31 @@
   font-size: 2vh;
   padding: 1vh;
   border: solid transparent;
+  
+}
+
+.episodes_section {
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.episode {
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+  font-size: 2.5vh;
+  padding: 1vh;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 1vh;
+}
+
+.episode_title {
+  font-weight: bold;
+}
+
+.episode_duration {
+  font-size: 2vh;
+  color: rgba(255, 255, 255, 0.7);
 }

@@ -9,7 +9,7 @@ const LoginForm = () => {
     const navigate = useNavigate()
 
     function handleLogin() {
-        localStorage.setItem("token", 123)
+        localStorage.setItem("token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzMxNTM4NDAxLCJleHAiOjE3MzQxMzA0MDF9.Nah48IsRPlvxjyrwVVXWl8htfqD5OiX8KQMq98f5okA")
         navigate("/")
     } 
 
