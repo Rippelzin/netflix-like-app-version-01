@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import MyList from './pages/MyList';
 import Player from './pages/Player';
+import AdminForm from './components/AdminForm';
 
 
 
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/login" element={ <Login />} />
         <Route path="/my-list" element={<PrivateRoute> <MyList/> </PrivateRoute>} />
         <Route path="/player" element={<PrivateRoute> <Player/> </PrivateRoute>} />
+        <Route path="/admin" element={<PrivateRoute> <AdminForm/> </PrivateRoute>} />
       </Routes>
     </Router>
   );
