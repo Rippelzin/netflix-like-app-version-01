@@ -13,7 +13,7 @@ const Navbar = () => {
     return (
       <nav className={styles.navbar}>
         <div className={styles.logo}>
-          <Link to="/">MyApp</Link>
+          <Link to="/">App</Link>
         </div>
         <div className={styles.hamburger} onClick={handleMenuToggle}>
           ☰
@@ -26,7 +26,7 @@ const Navbar = () => {
             <Link to="/my-list" onClick={handleMenuToggle}>My List</Link>
           </li>
           <li>
-            <Link to="/login" onClick={handleMenuToggle}>Login</Link>
+            <Link to="/login" onClick={handleMenuToggle}>Minha conta</Link>
           </li>
           
         </ul>
