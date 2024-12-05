@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "../styles/AdminForm.module.css";
 import MovieFormsController from "./forms/MovieFormsController";
-import SerieForms from "./forms/SerieForms";
-import EpisodeForms from "./forms/EpisodeForms";
+import SerieFormsController from "./forms/SerieFormsController";
+import EpisodeFormsController from "./forms/EpisodeFormsController";
 
 const AdminForm = () => {
   const [content, setContent] = useState("movie"); // Estado para controlar o tipo principal
@@ -52,8 +52,8 @@ const AdminForm = () => {
       {/* Renderização condicional dos formulários */}
       <div className={styles.formContainer}>
         {content === "movie" && <MovieFormsController />}
-        {content === "serie" && <SerieForms />}
-        {content === "episode" && <EpisodeForms />}
+        {content === "serie" && <SerieFormsController />}
+        {content === "episode" && <EpisodeFormsController />}
       </div>
     </div>
   );

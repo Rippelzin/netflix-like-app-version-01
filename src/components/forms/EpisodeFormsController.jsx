@@ -1,22 +1,21 @@
 import React, { useState } from "react";
-import { useForm } from 'react-hook-form';
 import styles from "../../styles/AdminForm.module.css";
-import CreateMovieForm from "./MoviesForms/CreateMovieForm";
-import UpdateMovieForm from "./MoviesForms/UpdateMovieForm";
-import DeleteMovieForm from "./MoviesForms/DeleteMovieForm";
+import CreateEpisodeForm from "./EpisodesForms/CreateEpisodeForm";  // Formulário para criar episódio
+import UpdateEpisodeForm from "./EpisodesForms/UpdateEpisodeForm";  // Formulário para atualizar episódio
+import DeleteEpisodeForm from "./EpisodesForms/DeleteEpisodeForm";  // Formulário para deletar episódio
 
-const MovieForms = () => {
+const EpisodeFormsController = () => {
   const [action, setAction] = useState("create"); // Estado para controlar a ação (Adicionar, Atualizar, Deletar)
-   
+
   const handleActionChange = (event) => {
-    setAction(event.target.value);
+    setAction(event.target.value);  // Altera a ação com base na escolha do usuário
   };
 
   return (
     <div className={styles.container}>
-      <h2>Gerenciar Filmes</h2>
+      <h2>Gerenciar Episódios</h2>
 
-      {/* Seletor de ação */}
+      {/* Seletor de ação (Adicionar, Atualizar ou Deletar) */}
       <div className={styles.radioGroup}>
         <label>
           <input
@@ -50,20 +49,20 @@ const MovieForms = () => {
         </label>
       </div>
 
-      {/* Formulários baseados na ação */}
+      {/* Exibe o formulário de acordo com a ação selecionada */}
       <div>
         {action === "create" && (
-           <CreateMovieForm/>
+          <CreateEpisodeForm />
         )}
         {action === "update" && (
-          <UpdateMovieForm/>
+          <UpdateEpisodeForm />
         )}
         {action === "delete" && (
-          <DeleteMovieForm/>
+          <DeleteEpisodeForm />
         )}
       </div>
     </div>
   );
 };
 
-export default MovieForms;
+export default EpisodeFormsController;

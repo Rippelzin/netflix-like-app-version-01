@@ -1,75 +1,86 @@
-/* Banner.module.css */
-
-
+/* Container do Banner */
 .banner_container {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centraliza o banner na tela */
+  width: 90%; /* Largura reduzida */
+  max-width: 500px; /* Largura máxima controlada */
+  height: 70%; /* Altura um pouco maior para dar mais espaço */
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9); /* Fundo escuro */
   color: white;
   z-index: 1000;
   padding: 20px;
   box-sizing: border-box;
+  border-radius: 15px; /* Cantos arredondados */
+  overflow: hidden;
 }
 
-.banner_content {
-  background-color: rgba(255, 255, 255, 0.373);
-  display: grid;
-  width: 70vh;
-  height: 40vh;
-  text-align: left;
-  padding: 2vh;
-}
-
+/* Imagem de fundo do banner */
 .banner_image {
-  position: absolute;
-  
-  width: 80vh;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  opacity: 0.8;
+  opacity: 0.6;
   z-index: -1;
+  border-radius: 10px;
 }
 
+/* Título do banner */
 .banner_title {
-  font-size: 6vh;
+  font-size: 4vh; /* Tamanho ajustado */
   font-weight: bold;
   margin-bottom: 1vh;
+  color: #ff073a; /* Cor vermelha */
+  text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.7); /* Sombra vermelha */
+  text-align: center;
 }
 
+/* Informações do banner (duração, idade) */
 .banner_info {
   display: flex;
   align-items: center;
   gap: 1vh;
-  font-size: 3vh;
+  font-size: 2.5vh; /* Tamanho ajustado */
   margin-bottom: 1vh;
+  text-align: center;
 }
 
 .banner_info .ageRating {
-  padding: 1vh 1vh;
+  padding: 1vh;
   border-radius: 1vh;
-  background-color: rgba(200, 11, 11, 0.9);
+  background-color: rgba(255, 0, 0, 0.8); /* Fundo vermelho forte */
   font-weight: bold;
+  color: white;
+  text-transform: uppercase;
 }
 
+/* Descrição do banner */
 .banner_description {
-  font-size: 3vh;
+  font-size: 2.5vh; /* Tamanho ajustado */
   line-height: 1.5;
-  max-width: 50vh;
-  background-color: rgb(241, 6, 6);
+  max-width: 70vh; /* Aumentada a largura máxima para dar mais espaço */
+  background-color: rgba(255, 0, 0, 0.5); /* Fundo semi-transparente */
   border-radius: 2vh;
   padding: 2vh;
+  margin-top: 10px;
+  color: white;
+  text-align: center;
+  height: auto; /* Ajusta a altura automaticamente conforme o conteúdo */
+  overflow: auto; /* Permite rolar caso o conteúdo ultrapasse a altura */
+  height: 20vh; /* Limita a altura da descrição */
 }
 
+/* Botões do banner */
 .banner_buttons {
   display: flex;
-  gap: 1vh;
+  gap: 2vh;
   margin-top: 2vh;
+  justify-content: center;
 }
 
 .banner_button {
@@ -77,36 +88,50 @@
   font-size: 2.5vh;
   font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
 }
 
+/* Botão Play (vermelho neon) */
 .banner_button.play {
-  background-color: #e50914;
+  background-color: #ff073a; /* Vermelho neon */
   color: white;
+  text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.7); /* Efeito de sombra */
 }
 
+/* Botão More Info */
 .banner_button.moreInfo {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2); /* Fundo translúcido */
   color: white;
+  border: 2px solid rgba(255, 255, 255, 0.6); /* Borda suave */
 }
-.close_button{
-  background-color: rgb(255, 0, 0);
-  width: 5vh;
-  height: 5vh;
-  border-radius: 10vh;
+
+/* Botão de Fechar */
+.close_button {
+  background-color: #ff073a; /* Vermelho neon */
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
   color: white;
   font-size: 2vh;
   padding: 1vh;
   border: solid transparent;
-  
+  position: absolute;
+  top: 10px; /* Mais perto do topo */
+  right: 10px; /* Mais perto da direita */
+  cursor: pointer;
+  z-index: 1001; /* Garante que o botão de fechar fique acima do conteúdo */
 }
 
+/* Seção de Episódios */
 .episodes_section {
   margin-top: 2vh;
   display: flex;
   flex-direction: column;
-  gap: 1vh;
+  gap: 2vh;
+  height: 30vh;
 }
 
 .episode {
@@ -115,7 +140,7 @@
   gap: 1vh;
   font-size: 2.5vh;
   padding: 1vh;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2); /* Fundo semitransparente */
   border-radius: 1vh;
 }
 

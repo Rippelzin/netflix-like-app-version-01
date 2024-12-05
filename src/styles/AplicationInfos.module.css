@@ -1,0 +1,94 @@
+/* Container principal com fundo escuro e bordas arredondadas */
+.container {
+    padding: 30px;
+    background-color: #121212; /* Fundo escuro */
+    border-radius: 20px; /* Bordas arredondadas */
+    box-shadow: 0 8px 16px rgba(255, 0, 0, 0.3); /* Sombra vermelha */
+    width: 100%;
+    max-width: 700px;
+    margin: 40px auto;
+    color: #fff; /* Texto branco para contraste */
+    font-family: 'Roboto', sans-serif; /* Fonte moderna */
+    transition: all 0.3s ease-in-out; /* Efeito suave para todas as transições */
+  }
+  
+  /* Efeito hover na borda do container */
+  .container:hover {
+    box-shadow: 0 0 30px 10px #ff3d3d; /* Borda de neon vermelha mais forte */
+    border: 1px solid #ff073a; /* Borda vermelha mais espessa e iluminada */
+  }
+  
+  /* Cabeçalho com título futurista */
+  .header {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff3d3d; /* Vermelho vibrante */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #ff3d3d; /* Linha vermelha embaixo */
+    padding-bottom: 10px;
+    transition: all 0.3s ease-in-out; /* Efeito de transição suave */
+  }
+  
+  /* Efeito hover para o título */
+  .header:hover {
+    color: #ff073a;
+    text-shadow: 0 0 10px #ff3d3d, 0 0 20px #ff073a, 0 0 30px #ff073a, 0 0 40px #ff073a;
+    border-bottom: 2px solid #ff073a; /* Linha inferior de neon */
+  }
+  
+  /* Estilo de erro, com cor vermelha vibrante */
+  .error {
+    color: #ff3d3d;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  /* Texto com informações sobre duração */
+  .infoText {
+    font-size: 20px;
+    margin: 15px 0;
+    color: #ccc; /* Cor neutra para texto */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Efeito hover para os textos de duração */
+  .infoText:hover {
+    color: #ff073a;
+    text-shadow: 0 0 10px #ff3d3d, 0 0 20px #ff073a, 0 0 30px #ff073a, 0 0 40px #ff073a;
+  }
+  
+  /* Mensagem de carregamento estilizada */
+  .loading {
+    font-style: italic;
+    color: #aaa; /* Cor cinza claro */
+  }
+  
+  /* Rótulos de duração com cor vermelha e destaque */
+  .durationLabel {
+    font-weight: bold;
+    color: #ff3d3d;
+  }
+  
+  /* Efeito de hover futurista para botões ou elementos interativos */
+  .button {
+    padding: 12px 20px;
+    background-color: #ff3d3d;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .button:hover {
+    transform: scale(1.05); /* Efeito de zoom */
+    box-shadow: 0 8px 16px rgba(255, 0, 0, 0.6);
+    background-color: #ff073a;
+    text-shadow: 0 0 10px #ff3d3d, 0 0 20px #ff073a, 0 0 30px #ff073a, 0 0 40px #ff073a;
+  }
+  

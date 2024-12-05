@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { useForm } from 'react-hook-form';
 import styles from "../../styles/AdminForm.module.css";
-import CreateMovieForm from "./MoviesForms/CreateMovieForm";
-import UpdateMovieForm from "./MoviesForms/UpdateMovieForm";
-import DeleteMovieForm from "./MoviesForms/DeleteMovieForm";
+import CreateSerieForm from './SeriesForms/CreateSerieForm'
+import UpdateSerieForm from "./SeriesForms/UpdateSerieForm";
+import DeleteSerieForm from "./SeriesForms/DeleteSerieForm";
 
-const MovieForms = () => {
+const SeriesForms = () => {
   const [action, setAction] = useState("create"); // Estado para controlar a ação (Adicionar, Atualizar, Deletar)
    
   const handleActionChange = (event) => {
@@ -14,7 +13,7 @@ const MovieForms = () => {
 
   return (
     <div className={styles.container}>
-      <h2>Gerenciar Filmes</h2>
+      <h2>Gerenciar Séries aaa</h2>
 
       {/* Seletor de ação */}
       <div className={styles.radioGroup}>
@@ -53,17 +52,17 @@ const MovieForms = () => {
       {/* Formulários baseados na ação */}
       <div>
         {action === "create" && (
-           <CreateMovieForm/>
+          <CreateSerieForm/>
         )}
         {action === "update" && (
-          <UpdateMovieForm/>
+          <UpdateSerieForm/>
         )}
         {action === "delete" && (
-          <DeleteMovieForm/>
+          <DeleteSerieForm/>
         )}
       </div>
     </div>
   );
 };
 
-export default MovieForms;
+export default SeriesForms;

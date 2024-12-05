@@ -1,57 +1,97 @@
-.card{
-    width: 30vh;
-    height: fit-content;
-    padding: 10px;
-    background-color: red;
-    transition: transform 1s ease-in-out;
-    
+/* Estilo do card */
+.card {
+  width: 300px;
+  height: fit-content;
+  padding: 15px;
+  background-color: #121212; /* Fundo escuro */
+  border-radius: 15px; /* Bordas arredondadas */
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.2); /* Sombra de neon leve */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer; /* Mostra que o card é clicável */
+  margin-left: 50px;
 }
 
-
-.img{
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    border-radius: 8px;
-    
-}
-.carddisplay{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 3vh ;
+.card:hover {
+  transform: translateY(-10px); /* Levanta o card ao passar o mouse */
+  box-shadow: 0 0 20px 5px #ff3d3d; /* Efeito de neon forte na borda */
 }
 
-.arrowbutton {
-    background-color: #333; /* Cor do fundo do botão */
-    border: 2px solid white; /* Borda branca */
-    border-radius: 50%; /* Torna o botão circular */
-    width: 4vh; /* Largura do botão */
-    height: 4vh; /* Altura do botão */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    outline: none; /* Remove a borda de foco do botão */
-    transition: background-color 0.3s, transform 0.2s; /* Transições para efeito hover */
-  }
-  
-  .arrow-button:hover {
-    background-color: #555; /* Cor do fundo ao passar o mouse */
-    transform: scale(1.05); /* Aumenta um pouco ao passar o mouse */
-  }
-  
-  .arrow {
-    color: white; /* Cor da seta */
-    font-size: 2vh; /* Tamanho da seta */
-  }
+/* Imagem do card */
+.img {
+  width: 100%;
+  height: 180px; /* Tamanho fixo para imagem */
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
 
+.card:hover .img {
+  transform: scale(1.05); /* Efeito de zoom na imagem */
+}
 
-  .banner_container{
-    z-index: 2;
-    margin-top: 2vh;
-    height: 40vh;
-    width: 100vh;
-    position: absolute;
-  }
-  
+/* Título do card */
+.card div {
+  color: #fff; /* Cor do título branco */
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Botão de clique */
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ff073a; /* Vermelho neon */
+  border: 2px solid #ff073a;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  background-color: #ff3d3d; /* Efeito de hover mais forte */
+  transform: scale(1.05); /* Aumenta o botão ao passar o mouse */
+  box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.5); /* Brilho de neon no botão */
+}
+
+/* Estilos para a seta dentro do botão (se existir) */
+.arrow-button {
+  background-color: #333; /* Fundo escuro do botão */
+  border: 2px solid white; /* Borda branca */
+  border-radius: 50%; /* Forma circular */
+  width: 40px; /* Tamanho do botão */
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.arrow-button:hover {
+  background-color: #555; /* Cor de fundo ao passar o mouse */
+  transform: scale(1.1); /* Aumenta o tamanho da seta */
+}
+
+.arrow {
+  color: white;
+  font-size: 20px; /* Tamanho da seta */
+}
+
+/* Estilo do container do banner (se necessário) */
+.banner_container {
+  z-index: 2;
+  margin-top: 2vh;
+  height: 40vh;
+  width: 100vh;
+  position: absolute;
+}

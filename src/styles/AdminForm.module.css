@@ -1,100 +1,128 @@
 /* AdminForm.module.css */
 .container {
-    background-color: rgb(69, 62, 62);
-    color: white;
-    padding: 10px;
-    border-radius: 8px;
-    max-width: 50vh;
-    margin: auto;
-    
-  }
-  
-  .title {
-    text-align: center;
-    color: red;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .radioGroup {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-  }
-  
-  .radioGroup label {
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .radioGroup input {
-    margin-right: 8px;
-  }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .form label {
-    display: flex;
-    flex-direction: column;
-    font-size: 14px;
-  }
-  
-  .input {
-    padding: 8px;
-    border: 1px solid red;
-    border-radius: 4px;
-    background-color: #1a1a1a;
-    color: white;
-  }
-  
-  .button {
-    background-color: red;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .button:hover {
-    background-color: #ff4c4c;
-  }
-  
-  .suggestions {
-    list-style-type: none;
-    padding: 0;
-    margin: 5px 0 0 0;
-    border: 1px solid #ccc;
-    max-height: 150px;
-    overflow-y: auto;
-    background: #fff;
-    position: absolute;
-    width: 100%;
-    z-index: 1000;
+  background-color: rgb(20, 20, 20);  /* Fundo mais escuro */
+  color: white;
+  padding: 20px;
+  border-radius: 15px;  /* Bordas arredondadas */
+  max-width: 60vh;  /* Ajuste o tamanho */
+  margin: auto;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);  /* Brilho externo */
+  transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.02);  /* Aumento suave ao passar o mouse */
+}
+
+.title {
+  text-align: center;
+  color: red;
+  font-size: 30px;
+  font-family: 'Orbitron', sans-serif;  /* Fonte futurista */
+  margin-bottom: 30px;
+  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;  /* Efeito neon */
+}
+
+.radioGroup {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.radioGroup label {
+  font-size: 18px;
+  font-family: 'Orbitron', sans-serif;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+}
+
+.radioGroup input {
+  margin-right: 8px;
+  accent-color: red; /* Acento vermelho no botão de rádio */
+}
+
+/* Container do Formulário */
+.formContainer {
+  display: block; /* Garantir que os campos fiquem em bloco, um abaixo do outro */
+  margin-top: 20px;
+}
+
+/* Estilo para os campos de entrada */
+.form label {
+  display: block; /* Faz com que a label ocupe uma linha inteira */
+  font-size: 16px;
+  margin-bottom: 8px;  /* Espaçamento entre label e input */
+}
+
+.input {
+  padding: 12px;
+  border: 2px solid red;
+  border-radius: 10px; /* Borda arredondada */
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Efeito de brilho */
+  width: 100%;  /* Garantir que o input ocupe toda a largura disponível */
+  margin-bottom: 20px; /* Espaçamento entre os campos */
+}
+
+.input:focus {
+  border-color: #ff4c4c;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); /* Brilho mais forte no foco */
+}
+
+/* Estilo do botão */
+.button {
+  background-color: red;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Orbitron', sans-serif;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Brilho no botão */
+  width: 100%; /* Largura 100% para o botão ocupar toda a largura */
+}
+
+.button:hover {
+  background-color: #ff4c4c;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 1); /* Efeito de brilho */
+}
+
+/* Sugestões */
+.suggestions {
+  list-style-type: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  background: #333;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);  /* Brilho no menu de sugestões */
 }
 
 .suggestionItem {
-    padding: 8px;
-    cursor: pointer;
+  padding: 10px;
+  cursor: pointer;
+  color: red;
 }
 
 .suggestionItem:hover {
-    background-color: #f0f0f0;
+  background-color: red;
+  color: black;
 }
-
-
-
-
 
 /* Estilo para o container do select */
 .selectGenresContainer {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 /* Estilo para o controle do select (onde a caixa aparece) */
@@ -102,26 +130,25 @@
   background-color: black !important;
   border: 2px solid red !important;
   color: red !important;
+  border-radius: 10px; /* Borda arredondada */
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Efeito de brilho */
 }
 
-/* Estilo para quando o mouse passar sobre o controle */
 .selectGenresContainer .react-select__control:hover {
-  border-color: darkred !important;
+  border-color: #ff4c4c !important;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.8); /* Brilho no hover */
 }
 
-/* Estilo para o menu de opções */
 .selectGenresContainer .react-select__menu {
   background-color: black !important;
   color: red !important;
 }
 
-/* Estilo para cada opção no menu */
 .selectGenresContainer .react-select__option {
   background-color: black !important;
   color: red !important;
 }
 
-/* Estilo para quando o mouse passar sobre uma opção */
 .selectGenresContainer .react-select__option:hover {
   background-color: red !important;
   color: black !important;
@@ -133,4 +160,3 @@
   font-size: 14px;
   margin-top: 5px;
 }
-

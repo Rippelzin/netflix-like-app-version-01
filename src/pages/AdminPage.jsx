@@ -5,6 +5,7 @@ import AdminForm from "../components/AdminForm";
 import styles from "../styles/AdminPage.module.css"; // Estilos da página de Admin
 import Dashboard from "../components/Dashboards/Dashboard";
 import DoughnutDashboarad from "../components/Dashboards/DoughnutDashboarad";
+import AplicationInfos from "../components/Dashboards/AplicationInfos";
 
 const AdminPage = () => {
 
@@ -29,6 +30,7 @@ const handleClick = (option) => {
 
         { selectedItem === 2 && (
           <div className={styles.dashboardContainer} >
+            <AplicationInfos />
             <Dashboard />
             <DoughnutDashboarad />
           </div>
