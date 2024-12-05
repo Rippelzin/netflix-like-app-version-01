@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "../styles/AdminForm.module.css";
-import MovieForms from "./forms/MovieForms";
+import MovieFormsController from "./forms/MovieFormsController";
 import SerieForms from "./forms/SerieForms";
 import EpisodeForms from "./forms/EpisodeForms";
 
@@ -51,7 +51,7 @@ const AdminForm = () => {
 
       {/* Renderização condicional dos formulários */}
       <div className={styles.formContainer}>
-        {content === "movie" && <MovieForms />}
+        {content === "movie" && <MovieFormsController />}
         {content === "serie" && <SerieForms />}
         {content === "episode" && <EpisodeForms />}
       </div>

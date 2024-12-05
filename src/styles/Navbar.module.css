@@ -1,67 +1,73 @@
+/* src/styles/Navbar.module.css */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
-  }
-  
-  .logo a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-  }
-  
-  .hamburger {
-    display: none;
-    cursor: pointer;
-    color: white;
-    font-size: 1.8rem;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1.5vh 2vh; /* Ajuste proporcional */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 8vh; /* Altura da navbar ajustada para 8% da altura da tela */
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 2vh; /* Ajuste proporcional */
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: white;
+  font-size: 2.5vh; /* Ajuste proporcional */
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+}
+
+.navLinks li {
+  margin: 0 2vh; /* Espaçamento entre os itens */
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5vh; /* Ajuste proporcional */
+  transition: color 0.3s;
+}
+
+.navLinks a:hover {
+  color: #f4f4f4;
+}
+
+@media (max-width: 768px) {
   .navLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 8vh; /* Ajuste para que o menu apareça abaixo da navbar */
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 2vh;
+    box-sizing: border-box;
+  }
+
+  .navLinks.open {
     display: flex;
-    list-style: none;
   }
-  
+
   .navLinks li {
-    margin: 0 10px;
+    margin: 1vh 0;
   }
-  
-  .navLinks a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    transition: color 0.3s;
+
+  .hamburger {
+    display: block;
   }
-  
-  .navLinks a:hover {
-    color: #f4f4f4;
-  }
-  
-  @media (max-width: 768px) {
-    .navLinks {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      background-color: #333;
-      width: 100%;
-      padding: 10px;
-      box-sizing: border-box;
-    }
-  
-    .navLinks.open {
-      display: flex;
-    }
-  
-    .navLinks li {
-      margin: 10px 0;
-    }
-  
-    .hamburger {
-      display: block;
-    }
-  }
-  
+}

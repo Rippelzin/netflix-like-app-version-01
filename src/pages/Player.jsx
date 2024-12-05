@@ -17,6 +17,7 @@ function Player() {
                 controls={true}  // Habilita os controles de play/pause, volume, etc.
                 playing={false}  // Define como true se quiser que o vídeo comece automaticamente
             />
+            <div>ola</div>
     </div>
   );
 }

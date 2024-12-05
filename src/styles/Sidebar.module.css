@@ -1,0 +1,54 @@
+/* src/styles/Sidebar.module.css */
+.sidebar {
+  position: fixed;
+  top: 8vh; /* A sidebar começa logo abaixo da navbar */
+  left: 0;
+  width: 20vh; /* Largura da sidebar ajustada para 15% da altura da tela */
+  height: calc(92vh); /* Altura da sidebar será o restante da altura da tela, considerando a navbar */
+  background-color: #393939;
+  color: rgb(255, 0, 0);
+  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.sidebar h2 {
+  margin-bottom: 2vh; /* Espaço entre o título e os botões */
+  font-size: 3vh;
+  text-align: center;
+  width: 100%;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebarButton {
+  background-color: #5c5c5c;
+  color: white;
+  padding: 2vh;
+  margin: 1.5vh 0; /* Ajuste no espaçamento entre os botões */
+  border: none;
+  cursor: pointer;
+  font-size: 2vh; /* Ajuste proporcional */
+  border-radius: 0.5vh;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.sidebarButton:hover {
+  background-color: #ff0000;
+  transform: translateY(-1vh);
+}
+
+.sidebarButton:focus {
+  outline: none;
+}
+
+.sidebarButton:active {
+  background-color: #388e3c;
+}

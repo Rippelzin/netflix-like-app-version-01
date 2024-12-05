@@ -15,6 +15,7 @@ const Card = ({ info, onCardClick  }) => {
             alt=""
             
           />
+          <div>{info.title}</div>
           <button onClick={onCardClick}>clique aqui</button>
         </div>
     

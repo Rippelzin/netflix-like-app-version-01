@@ -1,11 +1,12 @@
 /* AdminForm.module.css */
 .container {
-    background-color: black;
+    background-color: rgb(69, 62, 62);
     color: white;
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
-    max-width: 500px;
+    max-width: 50vh;
     margin: auto;
+    
   }
   
   .title {
@@ -64,3 +65,72 @@
     background-color: #ff4c4c;
   }
   
+  .suggestions {
+    list-style-type: none;
+    padding: 0;
+    margin: 5px 0 0 0;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    background: #fff;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+.suggestionItem {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestionItem:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+
+
+/* Estilo para o container do select */
+.selectGenresContainer {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Estilo para o controle do select (onde a caixa aparece) */
+.selectGenresContainer .react-select__control {
+  background-color: black !important;
+  border: 2px solid red !important;
+  color: red !important;
+}
+
+/* Estilo para quando o mouse passar sobre o controle */
+.selectGenresContainer .react-select__control:hover {
+  border-color: darkred !important;
+}
+
+/* Estilo para o menu de opções */
+.selectGenresContainer .react-select__menu {
+  background-color: black !important;
+  color: red !important;
+}
+
+/* Estilo para cada opção no menu */
+.selectGenresContainer .react-select__option {
+  background-color: black !important;
+  color: red !important;
+}
+
+/* Estilo para quando o mouse passar sobre uma opção */
+.selectGenresContainer .react-select__option:hover {
+  background-color: red !important;
+  color: black !important;
+}
+
+/* Estilo para a mensagem de erro */
+.selectGenresContainer .error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+

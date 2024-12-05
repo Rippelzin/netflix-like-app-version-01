@@ -1,0 +1,42 @@
+/* src/styles/AdminPage.module.css */
+.pageContainer {
+  display: flex;
+  margin-top: 8vh; /* Margem superior para não sobrepor a navbar */
+  width: 100%; /* Garante que a página ocupe toda a largura disponível */
+  box-sizing: border-box;
+  
+}
+
+.mainContent {
+  margin-left: 20vh; /* Mantém a margem esquerda para a sidebar */
+  padding: 1.5vh; /* Menor padding para reduzir o espaço interno */
+  width: calc(100% - 20vh); /* Agora a mainContent ocupa o restante da largura disponível após a sidebar */
+  height: 20vh; /* Diminuindo a altura para 40% da tela */
+  max-height: 40vh; /* Garantir que o conteúdo não ultrapasse 60% da tela */
+ margin-top: 2vh;
+
+ 
+}
+
+.dashboardContainer {
+ margin-bottom: 10vh;
+  height: 60vh; /* A altura será 60% da altura da tela */
+  padding: 2vh;
+  box-sizing: border-box;
+}
+
+
+@media (max-width: 768px) {
+  .pageContainer {
+    flex-direction: column;
+    margin-top: 10vh; /* Ajuste da margem superior em dispositivos móveis */
+  }
+
+  .mainContent {
+    margin-left: 0; /* Remove a margem esquerda em telas pequenas */
+    width: 100%; /* O conteúdo ocupa toda a largura da tela */
+    padding: 1.5vh; /* Menos padding em dispositivos móveis */
+    height: auto; /* Permite que a altura se ajuste automaticamente em telas pequenas */
+    max-height: 80vh; /* Para dispositivos móveis, limite a altura máxima para 80% da tela */
+  }
+}

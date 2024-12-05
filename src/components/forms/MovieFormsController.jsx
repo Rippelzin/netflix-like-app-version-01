@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import { useForm } from 'react-hook-form';
 import styles from "../../styles/AdminForm.module.css";
+import CreateMovieForm from "./MoviesForms.jsx/CreateMovieForm";
+import UpdateMovieForm from "./MoviesForms.jsx/UpdateMovieForm";
+import DeleteMovieForm from "./MoviesForms.jsx/DeleteMovieForm";
 
 const MovieForms = () => {
   const [action, setAction] = useState("create"); // Estado para controlar a ação (Adicionar, Atualizar, Deletar)
-
+   
   const handleActionChange = (event) => {
     setAction(event.target.value);
   };
@@ -49,42 +53,13 @@ const MovieForms = () => {
       {/* Formulários baseados na ação */}
       <div>
         {action === "create" && (
-          <form className={styles.form}>
-            <h3>Adicionar Filme</h3>
-            <label>
-              Titulo:
-              <input className={styles.input} type="text" placeholder="Digite o titulo" />
-            </label>
-            <label>
-              Descrição:
-              <textarea className={styles.input} placeholder="Digite a descrição"></textarea>
-            </label>
-            <button className={styles.button} type="submit">Adicionar</button>
-          </form>
+           <CreateMovieForm/>
         )}
         {action === "update" && (
-          <form className={styles.form}>
-            <h3>Atualizar Filme</h3>
-            <label>
-              ID:
-              <input className={styles.input} type="text" placeholder="Digite o ID do filme" />
-            </label>
-            <label>
-              Novo Titulo:
-              <input className={styles.input} type="text" placeholder="Digite o novo titulo" />
-            </label>
-            <button className={styles.button} type="submit">Atualizar</button>
-          </form>
+          <UpdateMovieForm/>
         )}
         {action === "delete" && (
-          <form className={styles.form}>
-            <h3>Deletar Filme</h3>
-            <label>
-              ID:
-              <input className={styles.input} type="text" placeholder="Digite o ID do filme" />
-            </label>
-            <button className={styles.button} type="submit">Deletar</button>
-          </form>
+          <DeleteMovieForm/>
         )}
       </div>
     </div>

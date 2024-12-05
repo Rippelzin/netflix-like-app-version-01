@@ -8,7 +8,9 @@ function MyList() {
 
   
     return (
-    <div > teste
+    <div >
+      
+       <div>ola</div>
      <ReactPlayer
                 url={videoUrl}
                 controls={true}  // Habilita os controles de play/pause, volume, etc.
